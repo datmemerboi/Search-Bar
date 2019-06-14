@@ -25,12 +25,13 @@ class UIWindowClass(object):
 
 
 	def searchMongoFunction(self):
-		dbconn = MongoClient("mongodb://localhost:27017/")
-		# Connect to MongoDB as dbconn, database as db and collection as coll
+		dbconn = MongoClient("mongodb://localhost:27017/") # check for MongoDB port
+		# Connect to MongoDB database as db and collection as coll
 		query = self.searchBar.toPlainText().strip()
 		result = dbconn.db.coll.find({"name":{'$regex' : query, '$options' : 'i'}})
 		for i in result:
-			self.resultBox.setText( i['name']+"\n")
+			concat = self.resultBox.toPlainText().strip()
+			self.resultBox.setText( concat+"\n"+i['name'])
 		dbconn.close()
 
 if __name__ == '__main__':
