@@ -2,8 +2,8 @@ import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from pymongo import MongoClient
 
-class UIWindowClass(object):
-	def SearchBoxWin(self, window):
+class SearchBoxClass(object):
+	def SearchBoxWinFn(self, window):
 		window.setWindowTitle("SearchBoxWindow")
 		window.resize(400, 400)
 		window.setStyleSheet("font:Optima; background-color:rgb(0, 222, 148)")
@@ -37,6 +37,5 @@ class UIWindowClass(object):
 if __name__ == '__main__':
 	app = QtWidgets.QApplication(sys.argv)
 	MainWindow = QtWidgets.QMainWindow()
-	ui = UIWindowClass()
-	ui.SearchBoxWin(MainWindow)
+	SearchBoxClass().SearchBoxWinFn(MainWindow)
 	sys.exit(app.exec_())
