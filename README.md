@@ -2,7 +2,6 @@
 ## Basic Search Bar for MongoDB
 ### Using Python, PyQt5, MongoDB and PyMongo
 
-Using **PyQt5**, the Search Bar was created. It can be used to find the names that match with the string in the _input box_.
+Using **PyQt5**, the Search Bar was created. It can be used to find the names that match with the string in the *input box*.
 
-
-The connection to the mongodb and collections are to be mentioned.
+The code uses variables such as **db** and **col**. Mention connections to the MongoDB and collection there.
